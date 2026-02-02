@@ -17,6 +17,7 @@ jobs:
         run: |
           git submodule update --init --recursive vendor/assimp
           git submodule update --init --recursive vendor/imgui
+          git submodule update --init --recursive vendor/ImGuizmo
           git submodule update --init --recursive vendor/ozz-animation
           git submodule update --init --recursive vendor/spdlog
           git submodule update --init --recursive vendor/flecs
