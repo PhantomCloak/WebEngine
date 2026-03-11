@@ -6,13 +6,6 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-    steps:
-      - uses: actions/deploy-pages@v4
   build:
     runs-on: ubuntu-latest
     steps:
@@ -55,3 +48,11 @@ jobs:
         with:
           path: deploy
           retention-days: 1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/deploy-pages@v4
