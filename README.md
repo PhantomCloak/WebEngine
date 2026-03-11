@@ -5,6 +5,7 @@
 - [Ozz Animations](https://github.com/guillaumeblanc/ozz-animation)
 - [Assimp](https://github.com/assimp/assimp)
 - [ImGui](https://github.com/ocornut/imgui)
+- [Emscripten](https://github.com/emscripten-core/emscripten)
 
 ### Build
 
