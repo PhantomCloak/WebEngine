@@ -1,6 +1,6 @@
 # WebEngine
 
-[View on web browser &rarr;](https://unal.netasm.com)
+[View on web browser &rarr;](https://phantomcloak.me)
 
 - [Flecs](https://github.com/SanderMertens/flecs)
 - [Jolt Physics](https://github.com/jrouwe/JoltPhysics)
@@ -11,8 +11,5 @@
 
 ### Build
 
-For Web
-```cmake --preset emscripten ```
-
-For MacOS
-```cmake --preset dawn-macos ```
+- Web: `cmake --preset emscripten`
+- MacOS: `cmake --preset dawn-macos`
