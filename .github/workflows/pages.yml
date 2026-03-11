@@ -39,8 +39,7 @@ jobs:
       - name: cmake configure
         run: |
           export EMSCRIPTEN=$EMSDK/upstream/emscripten
-          cmake --preset emscripten-release \
-            -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
+          cmake --preset emscripten-release -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
       - name: cmake build
         run: cmake --build build/emscripten-release --parallel
       - name: copy files
