@@ -29,21 +29,32 @@ jobs:
         with:
           version: 4.0.10
 
-      - name: CMake Configure
-        run: |
-          export EMSCRIPTEN=$EMSDK/upstream/emscripten
-          cmake --preset emscripten-release \
-            -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
+      # - name: CMake Configure
+      #   run: |
+      #     export EMSCRIPTEN=$EMSDK/upstream/emscripten
+      #     cmake --preset emscripten-release \
+      #       -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
-      - name: CMake Build
-        run: cmake --build build/emscripten-release --parallel
+      # - name: CMake Build
+      #   run: cmake --build build/emscripten-release --parallel
 
-      - name: Prepare Files
-        run: |
+      # - name: Prepare Files
+      #   run: |
+      #     mkdir -p deploy
+      #     cp html/templates/index.html deploy/index.html
+      #     cp build/emscripten-release/ReEngine.js deploy/
+      #     cp build/emscripten-release/ReEngine.data deploy/
+      #     cp build/emscripten-release/ReEngine.wasm deploy/
+      #     cp -r Resources deploy/
+
+      - run: |
           mkdir -p deploy
-          cp html/templates/index.html deploy/index.html
-          cp build/emscripten-release/ReEngine.js deploy/
-          cp build/emscripten-release/ReEngine.data deploy/
-          cp build/emscripten-release/ReEngine.wasm deploy/
-          cp -r Resources deploy/
-          echo "unal.netasm.com" > deploy/CNAME
+          echo "hello, world" > deploy/index.html
+
+      - uses: oven-sh/setup-bun@v2
+      - name: Deploy Pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          bunx gh-pages -d deploy --name unal.networkassembly.com
