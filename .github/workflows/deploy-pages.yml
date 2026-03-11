@@ -1,19 +1,19 @@
-name: Build and Deploy Web
+name: Build and Deploy Pages
 
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
+    branches: [master]
+  workflow_dispatch: {}
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v6
 
-      - name: Checkout required submodules
+      - name: Checkout Submodules
         run: |
           git submodule update --init --recursive vendor/assimp
           git submodule update --init --recursive vendor/imgui
@@ -29,16 +29,16 @@ jobs:
         with:
           version: 4.0.10
 
-      - name: Configure CMake
+      - name: CMake Configure
         run: |
           export EMSCRIPTEN=$EMSDK/upstream/emscripten
           cmake --preset emscripten-release \
             -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
 
-      - name: Build
+      - name: CMake Build
         run: cmake --build build/emscripten-release --parallel
 
-      - name: Prepare deployment files
+      - name: Prepare Files
         run: |
           mkdir -p deploy
           cp html/templates/index.html deploy/index.html
@@ -47,12 +47,3 @@ jobs:
           cp build/emscripten-release/ReEngine.wasm deploy/
           cp -r Resources deploy/
           echo "unal.netasm.com" > deploy/CNAME
-
-      - name: Deploy to rain-demo
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          personal_token: ${{ secrets.DEMO_DEPLOY_TOKEN }}
-          external_repository: PhantomCloak/rain-demo
-          publish_branch: master
-          publish_dir: ./deploy
-          force_orphan: true
