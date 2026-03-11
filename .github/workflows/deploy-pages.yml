@@ -13,21 +13,21 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v6
 
-      - name: Checkout Submodules
-        run: |
-          git submodule update --init --recursive vendor/assimp
-          git submodule update --init --recursive vendor/imgui
-          git submodule update --init --recursive vendor/ImGuizmo
-          git submodule update --init --recursive vendor/ozz-animation
-          git submodule update --init --recursive vendor/spdlog
-          git submodule update --init --recursive vendor/flecs
-          git submodule update --init --recursive vendor/stb
-          git submodule update --init --recursive vendor/JoltPhysics
+      # - name: Checkout Submodules
+      #   run: |
+      #     git submodule update --init --recursive vendor/assimp
+      #     git submodule update --init --recursive vendor/imgui
+      #     git submodule update --init --recursive vendor/ImGuizmo
+      #     git submodule update --init --recursive vendor/ozz-animation
+      #     git submodule update --init --recursive vendor/spdlog
+      #     git submodule update --init --recursive vendor/flecs
+      #     git submodule update --init --recursive vendor/stb
+      #     git submodule update --init --recursive vendor/JoltPhysics
 
-      - name: Setup Emscripten
-        uses: mymindstorm/setup-emsdk@v14
-        with:
-          version: 4.0.10
+      # - name: Setup Emscripten
+      #   uses: mymindstorm/setup-emsdk@v14
+      #   with:
+      #     version: 4.0.10
 
       # - name: CMake Configure
       #   run: |
