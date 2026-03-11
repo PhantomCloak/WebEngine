@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v6
+      # - name: Checkout Repository
+      #   uses: actions/checkout@v6
 
       # - name: Checkout Submodules
       #   run: |
