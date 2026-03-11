@@ -6,13 +6,11 @@ on:
   workflow_dispatch: {}
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v6
-
       # - name: Checkout Submodules
       #   run: |
       #     git submodule update --init --recursive vendor/assimp
@@ -23,21 +21,17 @@ jobs:
       #     git submodule update --init --recursive vendor/flecs
       #     git submodule update --init --recursive vendor/stb
       #     git submodule update --init --recursive vendor/JoltPhysics
-
       # - name: Setup Emscripten
       #   uses: mymindstorm/setup-emsdk@v14
       #   with:
       #     version: 4.0.10
-
       # - name: CMake Configure
       #   run: |
       #     export EMSCRIPTEN=$EMSDK/upstream/emscripten
       #     cmake --preset emscripten-release \
       #       -DCMAKE_TOOLCHAIN_FILE=$EMSDK/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
-
       # - name: CMake Build
       #   run: cmake --build build/emscripten-release --parallel
-
       # - name: Prepare Files
       #   run: |
       #     mkdir -p deploy
@@ -46,16 +40,18 @@ jobs:
       #     cp build/emscripten-release/ReEngine.data deploy/
       #     cp build/emscripten-release/ReEngine.wasm deploy/
       #     cp -r Resources deploy/
-
       - run: |
           mkdir -p deploy
           echo "hello, world" > deploy/index.html
-
-      - uses: oven-sh/setup-bun@v2
-      - name: Deploy Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo '{ "devDependencies": { "gh-pages": "6.3.0" }, "scripts": { "deploy": "gh-pages -d deploy -b deploy --nojekyll" } }' > package.json
-          bun install
-          bun run deploy -- --cname unal.networkassembly.com -u "github-actions-bot <support+actions@github.com>"
+      - id: upload
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: deploy
+          retention-days: 1
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+    steps:
+      - uses: actions/deploy-pages@v4
