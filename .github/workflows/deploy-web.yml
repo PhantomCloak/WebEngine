@@ -46,7 +46,7 @@ jobs:
           cp build/emscripten-release/ReEngine.data deploy/
           cp build/emscripten-release/ReEngine.wasm deploy/
           cp -r Resources deploy/
-          echo "phantomcloak.me" > deploy/CNAME
+          echo "unal.netasm.com" > deploy/CNAME
 
       - name: Deploy to rain-demo
         uses: peaceiris/actions-gh-pages@v4
