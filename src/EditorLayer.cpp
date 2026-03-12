@@ -3,6 +3,7 @@
 #include <cmath>
 #include <cstring>
 #include <unordered_set>
+#include "glm/fwd.hpp"
 #include "imgui.h"
 #include "ImGuizmo.h"
 #include "Application.h"
@@ -42,6 +43,10 @@ namespace WebEngine
 
     m_Scene = std::make_unique<Scene>("Test Scene");
     m_Scene->Init();
+
+    m_EditorCamera.Position = glm::vec3(-10, 10.5, -24.1f);
+    m_EditorCamera.Yaw = 48.29;
+    m_EditorCamera.Pitch = -14.90;
   }
 
   void EditorLayer::OnDeattach()
