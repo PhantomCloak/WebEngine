@@ -8,7 +8,7 @@
 #include "io/filesystem.h"
 #include "render/ShaderManager.h"
 
-namespace Rain
+namespace WebEngine
 {
   TextureWrappingFormat ConvertAssimpWrapMode(aiTextureMapMode mode)
   {
@@ -156,14 +156,14 @@ namespace Rain
         RN_LOG("Texture Name: {}", textureName);
 
         Ref<Texture2D> matTexture;
-        if (Rain::ResourceManager::IsTextureExist(textureName))
+        if (WebEngine::ResourceManager::IsTextureExist(textureName))
         {
-          matTexture = Rain::ResourceManager::GetTexture(textureName);
+          matTexture = WebEngine::ResourceManager::GetTexture(textureName);
         }
         else
         {
           TextureProps texProps = GetTexturePropsFromAssimp(aiMat, aiTextureType_DIFFUSE, j);
-          matTexture = Rain::ResourceManager::LoadTexture(textureName, fileDirectory + "/" + texturePath.C_Str(), texProps);
+          matTexture = WebEngine::ResourceManager::LoadTexture(textureName, fileDirectory + "/" + texturePath.C_Str(), texProps);
         }
 
         material->Set("u_AlbedoTex", matTexture);
@@ -182,14 +182,14 @@ namespace Rain
         std::string textureName = FileSys::GetFileName(texturePath.C_Str());
 
         Ref<Texture2D> matTexture;
-        if (Rain::ResourceManager::IsTextureExist(textureName))
+        if (WebEngine::ResourceManager::IsTextureExist(textureName))
         {
-          matTexture = Rain::ResourceManager::GetTexture(textureName);
+          matTexture = WebEngine::ResourceManager::GetTexture(textureName);
         }
         else
         {
           TextureProps texProps = GetTexturePropsFromAssimp(aiMat, aiTextureType_NORMALS, 0);
-          matTexture = Rain::ResourceManager::LoadTexture(textureName, fileDirectory + "/" + texturePath.C_Str(), texProps);
+          matTexture = WebEngine::ResourceManager::LoadTexture(textureName, fileDirectory + "/" + texturePath.C_Str(), texProps);
         }
 
         material->Set("u_NormalTex", matTexture);
@@ -212,14 +212,14 @@ namespace Rain
         std::string textureName = FileSys::GetFileName(texturePath.C_Str());
 
         Ref<Texture2D> matTexture;
-        if (Rain::ResourceManager::IsTextureExist(textureName))
+        if (WebEngine::ResourceManager::IsTextureExist(textureName))
         {
-          matTexture = Rain::ResourceManager::GetTexture(textureName);
+          matTexture = WebEngine::ResourceManager::GetTexture(textureName);
         }
         else
         {
           TextureProps texProps = GetTexturePropsFromAssimp(aiMat, aiTextureType_METALNESS, 0);
-          matTexture = Rain::ResourceManager::LoadTexture(textureName, fileDirectory + "/" + texturePath.C_Str(), texProps);
+          matTexture = WebEngine::ResourceManager::LoadTexture(textureName, fileDirectory + "/" + texturePath.C_Str(), texProps);
         }
         material->Set("u_MetallicTex", matTexture);
       }
@@ -586,4 +586,4 @@ namespace Rain
     }
     return nullptr;
   }
-}  // namespace Rain
+}  // namespace WebEngine

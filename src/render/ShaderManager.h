@@ -4,7 +4,7 @@
 #include <string>
 #include "render/Shader.h"
 
-namespace Rain {
+namespace WebEngine {
   class ShaderManager {
    public:
     static Ref<Shader> LoadShader(const std::string& shaderId, const std::string& shaderPath);
@@ -15,4 +15,4 @@ namespace Rain {
    private:
     static std::map<std::string, Ref<Shader>> m_Shaders;
   };
-}  // namespace Rain
+}  // namespace WebEngine

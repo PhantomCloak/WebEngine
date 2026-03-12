@@ -7,7 +7,7 @@
 
 #include "scene/Entity.h"
 
-namespace Rain {
+namespace WebEngine {
   class PhysicsWheel {
    public:
     PhysicsWheel(JPH::VehicleConstraintSettings& vehicleSettings, Entity entity);
@@ -20,4 +20,4 @@ namespace Rain {
     float Radius;
     float Width;
   };
-}  // namespace Rain
+}  // namespace WebEngine

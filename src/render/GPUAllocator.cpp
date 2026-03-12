@@ -4,7 +4,7 @@
 #include "render/Render.h"
 #include "render/RenderContext.h"
 
-namespace Rain
+namespace WebEngine
 {
   int GPUAllocator::allocatedBufferCount = 0;
   int GPUAllocator::allocatedBufferTotalSize = 0;
@@ -56,4 +56,4 @@ namespace Rain
       }
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

@@ -30,7 +30,7 @@
 #include <Tracy.hpp>
 #endif
 
-namespace Rain
+namespace WebEngine
 {
   std::unique_ptr<Render> m_Render;
   Application* Application::m_Instance;
@@ -38,7 +38,7 @@ namespace Rain
   // This place still heavily under WIP
   void Application::OnStart()
   {
-    Rain::Log::Init();
+    WebEngine::Log::Init();
 
     RN_LOG("=== Rain Engine Starting ===");
     RN_LOG("OS: {}", SysInfo::OSName());
@@ -51,7 +51,7 @@ namespace Rain
     const auto InitializeScene = [this]()
     {
       RN_LOG("Render API is ready!");
-      Rain::ResourceManager::LoadTexture("T_Default", RESOURCE_DIR "/textures/placeholder.jpeg");
+      WebEngine::ResourceManager::LoadTexture("T_Default", RESOURCE_DIR "/textures/placeholder.jpeg");
 
       if (m_Render)
       {
@@ -67,7 +67,7 @@ namespace Rain
 
     if (m_Render)
     {
-      m_SwapChain = CreateRef<Rain::SwapChain>();
+      m_SwapChain = CreateRef<WebEngine::SwapChain>();
       m_Render->OnReady = InitializeScene;
       m_Render->Init(GetNativeWindow());
 
@@ -161,7 +161,7 @@ namespace Rain
     }
   }
 
-  void Application::OnMouseClick(Rain::MouseCode button)
+  void Application::OnMouseClick(WebEngine::MouseCode button)
   {
     // ImGuiIO& io = ImGui::GetIO();
     // if (io.WantCaptureMouse) {
@@ -172,7 +172,7 @@ namespace Rain
 
   void Application::OnKeyPressed(KeyCode key, KeyAction action)
   {
-    if (key == Rain::Key::Escape && action == Rain::Key::RN_KEY_RELEASE)
+    if (key == WebEngine::Key::Escape && action == WebEngine::Key::RN_KEY_RELEASE)
     {
       Cursor::CaptureMouse(false);
     }
@@ -189,4 +189,4 @@ namespace Rain
     glfwGetFramebufferSize((GLFWwindow*)GetNativeWindow(), &screenWidth, &screenHeight);
     return glm::vec2(screenWidth, screenHeight);
   }
-}  // namespace Rain
+}  // namespace WebEngine

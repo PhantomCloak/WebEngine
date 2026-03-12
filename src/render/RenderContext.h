@@ -3,7 +3,7 @@
 #include "core/Ref.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   class RenderContext
   {
@@ -30,4 +30,4 @@ namespace Rain
 
     friend class Render;
   };
-}  // namespace Rain
+}  // namespace WebEngine

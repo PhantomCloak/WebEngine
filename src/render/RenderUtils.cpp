@@ -1,6 +1,6 @@
 #include "RenderUtils.h"
 
-namespace Rain
+namespace WebEngine
 {
   void LayoutUtils::SetVisibility(WGPUBindGroupLayoutEntry& entry,
                                   GroupLayoutVisibility visibility)
@@ -243,4 +243,4 @@ namespace Rain
         return 0;
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

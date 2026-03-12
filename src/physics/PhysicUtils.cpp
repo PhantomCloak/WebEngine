@@ -1,6 +1,6 @@
 #include "PhysicUtils.h"
 
-namespace Rain {
+namespace WebEngine {
   JPH::Vec3 PhysicsUtils::ToJoltVector(const glm::vec3& vector) {
     return JPH::Vec3(vector.x, vector.y, vector.z);
   }
@@ -14,4 +14,4 @@ namespace Rain {
   glm::quat PhysicsUtils::FromJoltQuat(const JPH::Quat& quat) {
     return *(glm::quat*)&quat;
   }
-}  // namespace Rain
+}  // namespace WebEngine

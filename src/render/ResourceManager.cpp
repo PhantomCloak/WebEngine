@@ -20,11 +20,11 @@
 
 #include "render/Render.h"
 
-namespace Rain {
-  std::unordered_map<std::string, std::shared_ptr<Texture2D>> Rain::ResourceManager::_loadedTextures;
-  std::unordered_map<std::string, std::shared_ptr<TextureCube>> Rain::ResourceManager::_loadedTexturesCube;
+namespace WebEngine {
+  std::unordered_map<std::string, std::shared_ptr<Texture2D>> WebEngine::ResourceManager::_loadedTextures;
+  std::unordered_map<std::string, std::shared_ptr<TextureCube>> WebEngine::ResourceManager::_loadedTexturesCube;
 
-  std::unordered_map<AssetHandle, Ref<MeshSource>> Rain::ResourceManager::m_LoadedMeshSources;
+  std::unordered_map<AssetHandle, Ref<MeshSource>> WebEngine::ResourceManager::m_LoadedMeshSources;
 
   void WriteTexture2(void* pixelData, const WGPUTexture& target, uint32_t width, uint32_t height, uint32_t targetMip) {
     // Ref<RenderContext> renderContext = Render::Instance->GetRenderContext();
@@ -150,12 +150,12 @@ namespace Rain {
     return m_texture;
   }
 
-  bool Rain::ResourceManager::IsTextureExist(std::string id) {
+  bool WebEngine::ResourceManager::IsTextureExist(std::string id) {
     return _loadedTextures.find(id) != _loadedTextures.end();
   }
 
   // TOOD: check if file exist or not
-  std::shared_ptr<Texture2D> Rain::ResourceManager::LoadTexture(std::string id, std::string path) {
+  std::shared_ptr<Texture2D> WebEngine::ResourceManager::LoadTexture(std::string id, std::string path) {
     TextureProps defaultProps = {};
     defaultProps.DebugName = id;
     defaultProps.CreateSampler = true;
@@ -163,7 +163,7 @@ namespace Rain {
     return LoadTexture(id, path, defaultProps);
   }
 
-  std::shared_ptr<Texture2D> Rain::ResourceManager::LoadTexture(std::string id, std::string path, const TextureProps& props) {
+  std::shared_ptr<Texture2D> WebEngine::ResourceManager::LoadTexture(std::string id, std::string path, const TextureProps& props) {
     RN_PROFILE_FUNC;
 
     TextureProps textureProp = props;
@@ -180,7 +180,7 @@ namespace Rain {
     return texture;
   }
 
-  std::shared_ptr<Texture2D> Rain::ResourceManager::GetTexture(std::string id) {
+  std::shared_ptr<Texture2D> WebEngine::ResourceManager::GetTexture(std::string id) {
     if (_loadedTextures.find(id) == _loadedTextures.end()) {
       std::cout << "GetTexture for id " << id << " does not exist" << std::endl;
       return nullptr;
@@ -195,18 +195,18 @@ namespace Rain {
     return texture;
   }
 
-  Ref<MeshSource> Rain::ResourceManager::GetMeshSource(UUID handle) {
+  Ref<MeshSource> WebEngine::ResourceManager::GetMeshSource(UUID handle) {
     RN_ASSERT(m_LoadedMeshSources.find(handle) != m_LoadedMeshSources.end());
     return m_LoadedMeshSources[handle];
   }
 
-  Ref<MeshSource> Rain::ResourceManager::LoadMeshSource(std::string path) {
+  Ref<MeshSource> WebEngine::ResourceManager::LoadMeshSource(std::string path) {
     Ref<MeshSource> meshSource = CreateRef<MeshSource>(path);
     m_LoadedMeshSources[meshSource->Id] = meshSource;
     return meshSource;
   }
 
-  std::shared_ptr<TextureCube> Rain::ResourceManager::LoadCubeTexture(std::string id, const std::filesystem::path (&paths)[6]) {
+  std::shared_ptr<TextureCube> WebEngine::ResourceManager::LoadCubeTexture(std::string id, const std::filesystem::path (&paths)[6]) {
     TextureProps textureProp = {};
     textureProp.DebugName = id;
     textureProp.CreateSampler = true;
@@ -219,7 +219,7 @@ namespace Rain {
     return texture;
   }
 
-  // std::shared_ptr<TextureCube> Rain::ResourceManager::LoadCubeTexture(std::string id, const std::filesystem::path (&paths)[6]) {
+  // std::shared_ptr<TextureCube> WebEngine::ResourceManager::LoadCubeTexture(std::string id, const std::filesystem::path (&paths)[6]) {
   //   WGPUExtent3D cubemapSize = {0, 0, 6};
   //   std::array<uint8_t*, 6> pixelData;
   //
@@ -276,4 +276,4 @@ namespace Rain {
   //
   //   return tex;
   // }
-}  // namespace Rain
+}  // namespace WebEngine

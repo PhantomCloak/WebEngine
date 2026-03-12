@@ -6,7 +6,7 @@
 
 // In some environments (such as Emscriptten) underlying implementation details of the WebGPU API might require HEAP pointers
 
-namespace Rain
+namespace WebEngine
 {
   WGPUVertexFormat ConvertWGPUVertexFormat(ShaderDataType type)
   {
@@ -255,4 +255,4 @@ namespace Rain
       m_Pipeline = wgpuDeviceCreateRenderPipeline(device, pipelineDesc);
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

@@ -1,6 +1,6 @@
 #include "OzzAnimation.h"
 
-namespace Rain
+namespace WebEngine
 {
   void OzzAnimation::SetAnimation(ozz::unique_ptr<ozz::animation::Animation> animation)
   {
@@ -11,4 +11,4 @@ namespace Rain
     }
   }
 
-}  // namespace Rain
+}  // namespace WebEngine

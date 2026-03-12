@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 #include <unordered_map>
 
-namespace Rain {
+namespace WebEngine {
   void* NativeWndPtr;
 
   void Keyboard::Setup(void* nativeWndPtr) {
@@ -29,4 +29,4 @@ namespace Rain {
 
   void Keyboard::FlushPressedKeys() {
   }
-}  // namespace Rain
+}  // namespace WebEngine

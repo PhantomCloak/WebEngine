@@ -3,7 +3,7 @@
 #include <glm/gtc/quaternion.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 
-namespace Rain {
+namespace WebEngine {
   class Camera {
    public:
     Camera() = default;
@@ -20,4 +20,4 @@ namespace Rain {
    private:
     glm::mat4 m_ProjectionMatrix = glm::mat4(1.0f);
   };
-}  // namespace Rain
+}  // namespace WebEngine

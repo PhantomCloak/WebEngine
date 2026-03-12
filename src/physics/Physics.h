@@ -16,7 +16,7 @@
 #include <Jolt/RegisterTypes.h>
 #include <glm/glm.hpp>
 
-namespace Rain {
+namespace WebEngine {
   class Physics {
    public:
     static Physics* Instance;
@@ -26,4 +26,4 @@ namespace Rain {
 
    private:
   };
-}  // namespace Rain
+}  // namespace WebEngine

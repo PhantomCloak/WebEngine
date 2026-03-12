@@ -7,7 +7,7 @@
 #include "webgpu/webgpu_glfw.h"
 #endif
 
-namespace Rain
+namespace WebEngine
 {
   SwapChain::~SwapChain()
   {
@@ -123,4 +123,4 @@ namespace Rain
 
     return wgpuTextureCreateView(m_CurrentTexture, &viewDesc);
   }
-}  // namespace Rain
+}  // namespace WebEngine

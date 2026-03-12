@@ -125,7 +125,7 @@ class ObjectVsBroadPhaseLayerFilterImpl : public JPH::ObjectVsBroadPhaseLayerFil
   }
 };
 
-namespace Rain {
+namespace WebEngine {
   struct SceneQueryHit {
     uint64_t HitEntity = 0;
     glm::vec3 Position = glm::vec3(0.0f);

@@ -7,14 +7,14 @@ static void GLFWErrorCallback(int error, const char* description)
   // RN_CORE_ERROR("GLFW Error ({0}): {1}", error, description);
 }
 
-Rain::WebWindow::~WebWindow()
+WebEngine::WebWindow::~WebWindow()
 {
   Shutdown();
 }
 
-void Rain::WebWindow::Init(const WindowProps& props)
+void WebEngine::WebWindow::Init(const WindowProps& props)
 {
-  // Rain::Log::Init();
+  // WebEngine::Log::Init();
   // RN_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
   bool success = glfwInit();
@@ -81,6 +81,6 @@ void Rain::WebWindow::Init(const WindowProps& props)
     webWindow->OnResize(height, width); });
 }
 
-void Rain::WebWindow::Shutdown()
+void WebEngine::WebWindow::Shutdown()
 {
 }

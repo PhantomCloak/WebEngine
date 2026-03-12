@@ -3,7 +3,7 @@
 #include "render/RenderContext.h"
 #include "render/RenderUtils.h"
 
-namespace Rain
+namespace WebEngine
 {
   Ref<Shader> Shader::Create(const std::string& name, const std::string& filePath)
   {
@@ -65,4 +65,4 @@ namespace Rain
       m_ShaderModule = wgpuDeviceCreateShaderModule(RenderContext::GetDevice(), &shaderDesc);
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

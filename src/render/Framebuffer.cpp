@@ -2,7 +2,7 @@
 #include "Application.h"
 #include "render/Render.h"
 
-namespace Rain
+namespace WebEngine
 {
   Framebuffer::Framebuffer(const FramebufferSpec& props)
       : m_FrameBufferSpec(props)
@@ -70,4 +70,4 @@ namespace Rain
       }
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

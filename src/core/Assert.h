@@ -23,11 +23,11 @@ inline void PrintStackTrace() {
 #define RN_DEBUG_BREAK() raise(SIGTRAP)
 
 #define RN_CORE_ASSERT_MESSAGE_INTERNAL(...) \
-    ::Rain::Log::PrintAssertMessage(::Rain::Log::Type::Core, "Assertion Failed" __VA_OPT__(, ) __VA_ARGS__); \
+    ::WebEngine::Log::PrintAssertMessage(::WebEngine::Log::Type::Core, "Assertion Failed" __VA_OPT__(, ) __VA_ARGS__); \
     PrintStackTrace()
 
 #define RN_ASSERT_MESSAGE_INTERNAL(...) \
-    ::Rain::Log::PrintAssertMessage(::Rain::Log::Type::Client, "Assertion Failed" __VA_OPT__(, ) __VA_ARGS__); \
+    ::WebEngine::Log::PrintAssertMessage(::WebEngine::Log::Type::Client, "Assertion Failed" __VA_OPT__(, ) __VA_ARGS__); \
     PrintStackTrace()
 
 #else

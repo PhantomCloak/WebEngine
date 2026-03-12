@@ -10,7 +10,7 @@ static std::uniform_int_distribution<uint64_t> s_UniformDistribution;
 static std::mt19937 eng32(s_RandomDevice());
 static std::uniform_int_distribution<uint32_t> s_UniformDistribution32;
 
-namespace Rain {
+namespace WebEngine {
   UUID::UUID()
       : m_UUID(s_UniformDistribution(eng)) {
   }
@@ -22,4 +22,4 @@ namespace Rain {
   UUID::UUID(const UUID& other)
       : m_UUID(other.m_UUID) {
   }
-}  // namespace Rain
+}  // namespace WebEngine

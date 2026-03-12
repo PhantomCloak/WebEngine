@@ -3,7 +3,7 @@
 #include "render/RenderUtils.h"
 #include "render/ShaderManager.h"
 
-namespace Rain
+namespace WebEngine
 {
   std::unique_ptr<RenderDebug> RenderDebug::Instance;
 
@@ -256,4 +256,4 @@ namespace Rain
     DrawLine(v2, v3, color);
     DrawLine(v3, v1, color);
   }
-}  // namespace Rain
+}  // namespace WebEngine

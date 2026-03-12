@@ -12,7 +12,7 @@
 #include "scene/Entity.h"
 
 class RainTrackedVehicle;
-namespace Rain
+namespace WebEngine
 {
   class PhysicsScene
   {
@@ -74,4 +74,4 @@ namespace Rain
     float mBarrelPitch = 0.0f;
     bool mFire = false;
   };
-}  // namespace Rain
+}  // namespace WebEngine

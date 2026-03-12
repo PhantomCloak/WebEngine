@@ -3,7 +3,7 @@
 #include "Layer.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   class ImGuiLayer : public Layer
   {
@@ -20,4 +20,4 @@ namespace Rain
    private:
     WGPUTextureView m_CurrentTextureView = nullptr;
   };
-}  // namespace Rain
+}  // namespace WebEngine

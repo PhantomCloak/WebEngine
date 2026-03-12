@@ -2,7 +2,7 @@
 #include "render/RenderContext.h"
 #include "render/RenderUtils.h"
 
-namespace Rain
+namespace WebEngine
 {
   Ref<Sampler> Sampler::Create(SamplerProps props)
   {
@@ -74,4 +74,4 @@ namespace Rain
   {
     wgpuSamplerRelease(*m_Sampler);  // TODO better do
   }
-}  // namespace Rain
+}  // namespace WebEngine

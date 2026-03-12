@@ -8,7 +8,7 @@
 #include "render/RenderContext.h"
 #include "render/RenderUtils.h"
 
-namespace Rain
+namespace WebEngine
 {
   void ImGuiLayer::OnAttach()
   {
@@ -188,4 +188,4 @@ namespace Rain
     m_CurrentTextureView = nullptr;
   }
 
-}  // namespace Rain
+}  // namespace WebEngine

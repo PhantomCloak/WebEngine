@@ -25,7 +25,7 @@
 #endif
 #include "render/CommandEncoder.h"
 
-namespace Rain
+namespace WebEngine
 {
   RenderWGPU* RenderWGPU::Instance = nullptr;
 
@@ -84,7 +84,7 @@ namespace Rain
 
   Ref<Texture2D> RenderWGPU::GetWhiteTexture()
   {
-    static auto whiteTexture = Rain::ResourceManager::GetTexture("T_Default");
+    static auto whiteTexture = WebEngine::ResourceManager::GetTexture("T_Default");
     RN_ASSERT(whiteTexture->GetReadableView() != 0, "Material: Default texture couldn't found.");
     return whiteTexture;
   }
@@ -1012,4 +1012,4 @@ namespace Rain
     }
   }
 #endif
-}  // namespace Rain
+}  // namespace WebEngine

@@ -1,6 +1,6 @@
 #include "RenderPass.h"
 
-namespace Rain {
+namespace WebEngine {
 
   RenderPass::RenderPass(const RenderPassSpec& spec)
       : m_PassSpec(spec) {
@@ -34,4 +34,4 @@ namespace Rain {
   void RenderPass::Prepare() {
     m_PassBinds->InvalidateAndUpdate();
   }
-}  // namespace Rain
+}  // namespace WebEngine

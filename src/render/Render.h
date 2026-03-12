@@ -10,7 +10,7 @@ using WGPUStringView = const char*;
 #include "render/RenderPass.h"
 #include "render/CommandBuffer.h"
 
-namespace Rain
+namespace WebEngine
 {
   using OnRendererReadyCallback = std::function<void()>;
   class RenderPassEncoder;
@@ -82,4 +82,4 @@ namespace Rain
     static void OnAdapterInstanceCallback(WGPURequestAdapterStatus status, WGPUAdapter adapter, WGPUStringView message, void* userdata1, void* userdata2);
     void RendererPostInit();
   };
-}  // namespace Rain
+}  // namespace WebEngine

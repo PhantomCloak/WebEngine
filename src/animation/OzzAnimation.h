@@ -5,7 +5,7 @@
 #include <ozz/animation/runtime/animation.h>
 #include <ozz/base/memory/unique_ptr.h>
 
-namespace Rain
+namespace WebEngine
 {
   class OzzAnimation
   {
@@ -34,4 +34,4 @@ namespace Rain
     std::string m_Name;
   };
 
-}  // namespace Rain
+}  // namespace WebEngine

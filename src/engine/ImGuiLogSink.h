@@ -5,7 +5,7 @@
 #include <spdlog/sinks/base_sink.h>
 #include <string>
 
-namespace Rain
+namespace WebEngine
 {
   enum class LogLevel : uint8_t
   {
@@ -116,4 +116,4 @@ namespace Rain
     static constexpr size_t m_MaxLogs = 10000;
   };
 
-}  // namespace Rain
+}  // namespace WebEngine

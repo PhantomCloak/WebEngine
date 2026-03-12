@@ -5,7 +5,7 @@
 
 #include "engine/ImGuiLogSink.h"
 
-namespace Rain {
+namespace WebEngine {
   std::shared_ptr<spdlog::logger> Log::s_CoreLogger;
   std::shared_ptr<spdlog::logger> Log::s_ClientLogger;
 
@@ -29,4 +29,4 @@ namespace Rain {
     s_ClientLogger->set_level(spdlog::level::trace);
     s_ClientLogger->flush_on(spdlog::level::trace);
   }
-}  // namespace Rain
+}  // namespace WebEngine

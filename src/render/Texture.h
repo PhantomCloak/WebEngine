@@ -7,7 +7,7 @@
 #include "core/UUID.h"
 #include "render/Sampler.h"
 
-namespace Rain
+namespace WebEngine
 {
   enum TextureFormat
   {
@@ -147,4 +147,4 @@ namespace Rain
     void CreateFromFile(const TextureProps& props, const std::filesystem::path (&paths)[6]);
     void Invalidate();
   };
-}  // namespace Rain
+}  // namespace WebEngine

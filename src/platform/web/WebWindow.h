@@ -6,9 +6,9 @@
 #include "core/Window.h"
 #include "engine/Event.h"
 
-namespace Rain
+namespace WebEngine
 {
-  class WebWindow : public Rain::Window
+  class WebWindow : public WebEngine::Window
   {
    protected:
     virtual void OnKeyPressed(KeyCode key, KeyAction action) {};
@@ -36,4 +36,4 @@ namespace Rain
    private:
     GLFWwindow* m_Window;
   };
-}  // namespace Rain
+}  // namespace WebEngine

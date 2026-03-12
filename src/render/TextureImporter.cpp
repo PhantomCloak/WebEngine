@@ -12,7 +12,7 @@
 
 #include <stb_image.h>
 
-namespace Rain {
+namespace WebEngine {
   Buffer TextureImporter::ImportFileToBuffer(const std::filesystem::path& path, TextureFormat& outFormat, uint32_t& outWidth, uint32_t& outHeight) {
     Buffer imageBuffer;
     std::string pathStr = path.string();
@@ -34,4 +34,4 @@ namespace Rain {
 
     return imageBuffer;
   }
-}  // namespace Rain
+}  // namespace WebEngine

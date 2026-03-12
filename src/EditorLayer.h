@@ -8,7 +8,7 @@
 #include "scene/Scene.h"
 #include "scene/SceneRenderer.h"
 
-namespace Rain
+namespace WebEngine
 {
   struct EditorCamera
   {
@@ -76,4 +76,4 @@ namespace Rain
     glm::vec2 m_LastMousePos = {0.0f, 0.0f};
     bool m_RightMouseDown = false;
   };
-}  // namespace Rain
+}  // namespace WebEngine

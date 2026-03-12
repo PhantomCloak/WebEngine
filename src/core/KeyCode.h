@@ -4,7 +4,7 @@
 using KeyCode = uint16_t;
 using KeyAction = uint16_t;
 
-namespace Rain {
+namespace WebEngine {
   namespace Key {
 
     enum : KeyAction {
@@ -147,4 +147,4 @@ namespace Rain {
       Menu = 348
     };
   }  // namespace Key
-}  // namespace Rain
+}  // namespace WebEngine

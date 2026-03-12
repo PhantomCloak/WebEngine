@@ -17,7 +17,7 @@
 #include <Jolt/RegisterTypes.h>
 #include <Jolt/Physics/Collision/GroupFilterTable.h>
 
-namespace Rain
+namespace WebEngine
 {
   PhysicsBody::PhysicsBody(JPH::BodyInterface& bodyInterface, Entity entity)
   {
@@ -215,4 +215,4 @@ namespace Rain
     body->SetUserData(m_Entity.GetUUID());
     m_BodyID = body->GetID();
   }
-}  // namespace Rain
+}  // namespace WebEngine

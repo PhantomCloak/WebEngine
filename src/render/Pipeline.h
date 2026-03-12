@@ -6,7 +6,7 @@
 #include "render/Shader.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain {
+namespace WebEngine {
   enum PipelineCullingMode {
     BACK,
     FRONT,
@@ -44,4 +44,4 @@ namespace Rain {
 
    private:
   };
-}  // namespace Rain
+}  // namespace WebEngine

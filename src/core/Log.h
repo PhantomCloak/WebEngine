@@ -5,7 +5,7 @@
 #include <spdlog/fmt/ostr.h>
 #include <spdlog/spdlog.h>
 
-namespace Rain
+namespace WebEngine
 {
 
   class Log
@@ -69,6 +69,6 @@ namespace Rain
     static std::shared_ptr<spdlog::logger> s_ClientLogger;
   };
 
-#define RN_LOG(...) ::Rain::Log::PrintMessage(::Rain::Log::Type::Core, "STATUS: ", __VA_ARGS__)
-#define RN_LOG_ERR(...) ::Rain::Log::PrintMessageError(::Rain::Log::Type::Core, "ERROR: ", __VA_ARGS__)
-}  // namespace Rain
+#define RN_LOG(...) ::WebEngine::Log::PrintMessage(::WebEngine::Log::Type::Core, "STATUS: ", __VA_ARGS__)
+#define RN_LOG_ERR(...) ::WebEngine::Log::PrintMessageError(::WebEngine::Log::Type::Core, "ERROR: ", __VA_ARGS__)
+}  // namespace WebEngine

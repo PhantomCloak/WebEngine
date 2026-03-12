@@ -11,7 +11,7 @@
 
 #include "core/Ref.h"
 
-namespace Rain
+namespace WebEngine
 {
   class OzzSkeleton
   {
@@ -46,4 +46,4 @@ namespace Rain
     std::unordered_map<std::string, int32_t> m_JointNameToIndex;
   };
 
-}  // namespace Rain
+}  // namespace WebEngine

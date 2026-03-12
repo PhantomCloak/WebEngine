@@ -13,7 +13,7 @@
 // #include "ImGuizmo.h"
 
 // Jolt includes
-namespace Rain
+namespace WebEngine
 {
   Scene* Scene::Instance = nullptr;
 
@@ -35,9 +35,9 @@ namespace Rain
     auto camera = CreateEntity("MainCamera");
     camera.AddComponent<CameraComponent>();
 
-    auto testModel = Rain::ResourceManager::LoadMeshSource(RESOURCE_DIR "/test2/untitled.gltf");
-    auto boxModel = Rain::ResourceManager::LoadMeshSource(RESOURCE_DIR "/box.gltf");
-    auto weaponModel = Rain::ResourceManager::LoadMeshSource(RESOURCE_DIR "/assault_rifle_pbr/scene.gltf");
+    auto testModel = WebEngine::ResourceManager::LoadMeshSource(RESOURCE_DIR "/test2/untitled.gltf");
+    auto boxModel = WebEngine::ResourceManager::LoadMeshSource(RESOURCE_DIR "/box.gltf");
+    auto weaponModel = WebEngine::ResourceManager::LoadMeshSource(RESOURCE_DIR "/assault_rifle_pbr/scene.gltf");
 
     Entity modelEntity = CreateEntity("bump");
     Entity floorEntity = CreateEntity("box");
@@ -187,7 +187,7 @@ namespace Rain
     drawNodeQuery.each([&](flecs::entity entity, TransformComponent& transform, MeshComponent& meshComponent)
                        {
       Entity e = Entity(entity, this);
-      Ref<MeshSource> meshSource = Rain::ResourceManager::GetMeshSource(meshComponent.MeshSourceId);
+      Ref<MeshSource> meshSource = WebEngine::ResourceManager::GetMeshSource(meshComponent.MeshSourceId);
       glm::mat4 entityTransform = GetWorldSpaceTransformMatrix(e);
 
       // Check if this entity has an animator component
@@ -296,4 +296,4 @@ namespace Rain
   void Scene::ScanKeyPress()
   {
   }
-}  // namespace Rain
+}  // namespace WebEngine

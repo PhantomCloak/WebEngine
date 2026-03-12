@@ -8,7 +8,7 @@
 using WGPUBufferUsageFlags = WGPUBufferUsage;
 #endif
 
-namespace Rain
+namespace WebEngine
 {
   class GPUBuffer;
   class GPUAllocator
@@ -42,4 +42,4 @@ namespace Rain
    private:
     friend GPUAllocator;
   };
-}  // namespace Rain
+}  // namespace WebEngine

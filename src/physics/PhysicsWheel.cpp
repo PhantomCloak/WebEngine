@@ -5,7 +5,7 @@
 #include "scene/Components.h"
 #include "PhysicUtils.h"
 
-namespace Rain {
+namespace WebEngine {
   PhysicsWheel::PhysicsWheel(JPH::VehicleConstraintSettings& vehicleSettings, Entity entity) {
     const WheelColliderComponent& wheelColliderComponent = entity.GetComponent<WheelColliderComponent>();
     JPH::WheelSettingsTV* wheelSetting = new JPH::WheelSettingsTV;
@@ -26,4 +26,4 @@ namespace Rain {
     Width = wheelColliderComponent.Width;
     Radius = wheelColliderComponent.Radius;
   }
-}  // namespace Rain
+}  // namespace WebEngine

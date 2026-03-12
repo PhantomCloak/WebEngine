@@ -3,7 +3,7 @@
 #include "render/RenderContext.h"
 #include "render/RenderUtils.h"
 
-namespace Rain
+namespace WebEngine
 {
   void CommandBuffer::Begin()
   {
@@ -32,4 +32,4 @@ namespace Rain
 
     wgpuCommandBufferRelease(m_Buffer);
   }
-}  // namespace Rain
+}  // namespace WebEngine

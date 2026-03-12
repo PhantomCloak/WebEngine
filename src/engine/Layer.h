@@ -1,7 +1,7 @@
 #pragma once
 
 #include "engine/Event.h"
-namespace Rain
+namespace WebEngine
 {
   class Layer
   {
@@ -17,4 +17,4 @@ namespace Rain
 
     virtual void OnEvent(Event& event) {};
   };
-}  // namespace Rain
+}  // namespace WebEngine

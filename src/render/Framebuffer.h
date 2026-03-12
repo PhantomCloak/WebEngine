@@ -1,7 +1,7 @@
 #pragma once
 #include "render/Texture.h"
 
-namespace Rain
+namespace WebEngine
 {
   // struct FrameBufferAttachmentSpec {
   //   std::vector<
@@ -68,4 +68,4 @@ namespace Rain
     std::vector<Ref<Texture2D>> m_ColorAttachment;
     Ref<Texture2D> m_DepthAttachment;
   };
-}  // namespace Rain
+}  // namespace WebEngine

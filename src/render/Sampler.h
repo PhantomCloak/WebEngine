@@ -4,7 +4,7 @@
 #include "core/Ref.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   enum TextureWrappingFormat
   {
@@ -65,4 +65,4 @@ namespace Rain
    private:
     Ref<WGPUSampler> m_Sampler;
   };
-}  // namespace Rain
+}  // namespace WebEngine

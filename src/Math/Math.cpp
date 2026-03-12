@@ -4,7 +4,7 @@
 #include <glm/gtx/norm.hpp>
 #include <glm/gtx/quaternion.hpp>
 
-namespace Rain::Math {
+namespace WebEngine::Math {
 
   static glm::vec3 Scale(const glm::vec3& v, float desiredLength) {
     return v * desiredLength / length(v);
@@ -75,4 +75,4 @@ namespace Rain::Math {
 
     return true;
   }
-}  // namespace Rain::Math
+}  // namespace WebEngine::Math

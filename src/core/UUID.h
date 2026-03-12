@@ -2,7 +2,7 @@
 #include "Base.h"
 typedef unsigned int uint;
 
-namespace Rain {
+namespace WebEngine {
   class UUID {
    public:
     UUID();
@@ -16,12 +16,12 @@ namespace Rain {
     uint64_t m_UUID;
   };
 
-}  // namespace Rain
+}  // namespace WebEngine
 
 namespace std {
   template <>
-  struct hash<Rain::UUID> {
-    size_t operator()(const Rain::UUID& uuid) const {
+  struct hash<WebEngine::UUID> {
+    size_t operator()(const WebEngine::UUID& uuid) const {
       // uuid is already a randomly generated number, and is suitable as a hash key as-is.
       // this may change in future, in which case return hash<uint64_t>{}(uuid); might be more appropriate
       return hash<uint64_t>()((uint64_t)uuid);

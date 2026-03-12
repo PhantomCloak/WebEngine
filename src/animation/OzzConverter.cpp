@@ -20,8 +20,8 @@
  * - We extract bone info from meshes but build the hierarchy from the scene graph (aiNode tree)
  *
  * ### The Conversion Pipeline
- * 1. Rain's Mesh loader extracts bone data from Assimp meshes → creates Rain::Skeleton
- * 2. OzzConverter::ConvertSkeleton() builds Ozz skeleton from Rain::Skeleton + aiScene
+ * 1. Rain's Mesh loader extracts bone data from Assimp meshes → creates WebEngine::Skeleton
+ * 2. OzzConverter::ConvertSkeleton() builds Ozz skeleton from WebEngine::Skeleton + aiScene
  * 3. OzzConverter::ConvertAnimation() maps Assimp animation channels to Ozz tracks
  *
  * ### Inverse Bind Matrices
@@ -47,7 +47,7 @@
 
 #include "core/Log.h"
 
-namespace Rain
+namespace WebEngine
 {
   namespace
   {
@@ -118,7 +118,7 @@ namespace Rain
    *
    * The Assimp scene graph contains ALL nodes - meshes, cameras, lights, bones, etc.
    * We only want to include nodes that are actual bones. We determine this by checking
-   * if the node's name exists in our Rain::Skeleton's bone name map.
+   * if the node's name exists in our WebEngine::Skeleton's bone name map.
    *
    * @param node The Assimp scene graph node to check
    * @param rainSkeleton Our skeleton data extracted during mesh loading
@@ -250,7 +250,7 @@ namespace Rain
   }
 
   /**
-   * @brief Converts Rain::Skeleton (from Assimp) to an Ozz runtime skeleton.
+   * @brief Converts WebEngine::Skeleton (from Assimp) to an Ozz runtime skeleton.
    *
    * ## The Conversion Process
    *
@@ -277,7 +277,7 @@ namespace Rain
    * OzzSkeleton separately, remapped to match Ozz's joint ordering.
    *
    * ## Why Joint Order Matters
-   * Ozz may reorder joints for cache efficiency. Our Rain::Skeleton has one
+   * Ozz may reorder joints for cache efficiency. Our WebEngine::Skeleton has one
    * ordering, Ozz has another. We must remap inverse bind matrices to Ozz's
    * order, which is why we look up joints by name.
    *
@@ -494,4 +494,4 @@ namespace Rain
     return result;
   }
 
-}  // namespace Rain
+}  // namespace WebEngine

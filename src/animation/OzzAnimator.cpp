@@ -7,7 +7,7 @@
 
 #include "core/Log.h"
 
-namespace Rain
+namespace WebEngine
 {
   namespace
   {
@@ -198,4 +198,4 @@ namespace Rain
     }
   }
 
-}  // namespace Rain
+}  // namespace WebEngine

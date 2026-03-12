@@ -7,7 +7,7 @@
 #include "render/Sampler.h"
 #include "render/Texture.h"
 
-namespace Rain {
+namespace WebEngine {
   enum class ShaderDataType {
     None = 0,
     Float,
@@ -295,4 +295,4 @@ namespace Rain {
    public:
     static uint32_t GetBytesPerPixel(TextureFormat format);
   };
-}  // namespace Rain
+}  // namespace WebEngine

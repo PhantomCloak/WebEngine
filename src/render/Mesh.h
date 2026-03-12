@@ -11,7 +11,7 @@
 #include <assimp/scene.h>
 #include <assimp/Importer.hpp>
 
-namespace Rain
+namespace WebEngine
 {
   struct VertexAttribute
   {
@@ -106,4 +106,4 @@ namespace Rain
     void TraverseNode(aiNode* node, const aiScene* scene);
     void ExtractBones(const aiScene* scene);
   };
-}  // namespace Rain
+}  // namespace WebEngine

@@ -11,7 +11,7 @@
 #include "render/Material.h"
 #include "render/Camera.h"
 
-namespace Rain {
+namespace WebEngine {
   struct IDComponent {
     UUID ID = 0;
   };
@@ -39,7 +39,7 @@ namespace Rain {
     }
 
     void SetTransform(const glm::mat4& transform) {
-      Rain::Math::DecomposeTransform(transform, Translation, Rotation, Scale);
+      WebEngine::Math::DecomposeTransform(transform, Translation, Rotation, Scale);
       RotationEuler = glm::eulerAngles(Rotation);
     }
 
@@ -206,4 +206,4 @@ namespace Rain {
     Ref<OzzAnimator> Animator;
     bool Playing = true;
   };
-}  // namespace Rain
+}  // namespace WebEngine

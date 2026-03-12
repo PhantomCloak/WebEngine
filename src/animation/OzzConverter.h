@@ -9,7 +9,7 @@
 #include "Skeleton.h"
 #include "core/Ref.h"
 
-namespace Rain
+namespace WebEngine
 {
   class OzzConverter
   {
@@ -28,4 +28,4 @@ namespace Rain
     static aiNode* FindBoneNode(const aiNode* root, const std::string& boneName);
   };
 
-}  // namespace Rain
+}  // namespace WebEngine

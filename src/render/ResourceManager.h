@@ -6,7 +6,7 @@
 #include "render/Mesh.h"
 #include "render/Texture.h"
 
-namespace Rain {
+namespace WebEngine {
   typedef UUID AssetHandle;
 
   class ResourceManager {
@@ -26,4 +26,4 @@ namespace Rain {
     static std::unordered_map<std::string, std::shared_ptr<TextureCube>> _loadedTexturesCube;
     static std::unordered_map<AssetHandle, Ref<MeshSource>> m_LoadedMeshSources;
   };
-}  // namespace Rain
+}  // namespace WebEngine

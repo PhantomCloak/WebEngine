@@ -2,7 +2,7 @@
 #include <cstdint>
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   class SwapChain
   {
@@ -22,4 +22,4 @@ namespace Rain
     WGPUSurface m_Surface = nullptr;
     WGPUTexture m_CurrentTexture = nullptr;
   };
-}  // namespace Rain
+}  // namespace WebEngine

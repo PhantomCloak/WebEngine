@@ -3,7 +3,7 @@
 #include "render/Render.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   class CommandEncoder
   {
@@ -37,4 +37,4 @@ namespace Rain
    private:
     WGPUCommandEncoder m_Encoder;
   };
-}  // namespace Rain
+}  // namespace WebEngine

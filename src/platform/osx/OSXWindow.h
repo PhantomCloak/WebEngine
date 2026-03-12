@@ -3,9 +3,9 @@
 #include "core/MouseCode.h"
 #include "core/Window.h"
 
-namespace Rain
+namespace WebEngine
 {
-  class OSXWindow : public Rain::Window
+  class OSXWindow : public WebEngine::Window
   {
    protected:
     virtual void OnKeyPressed(KeyCode key, KeyAction action) {};
@@ -29,4 +29,4 @@ namespace Rain
    private:
     GLFWwindow* m_Window;
   };
-}  // namespace Rain
+}  // namespace WebEngine

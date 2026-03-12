@@ -6,7 +6,7 @@
 #include "core/Ref.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   enum BindingType
   {
@@ -101,4 +101,4 @@ namespace Rain
 
     friend class ShaderManager;
   };
-}  // namespace Rain
+}  // namespace WebEngine

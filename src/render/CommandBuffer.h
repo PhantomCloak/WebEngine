@@ -2,7 +2,7 @@
 
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   class CommandBuffer
   {
@@ -17,4 +17,4 @@ namespace Rain
     WGPUCommandEncoder m_Encoder;
     WGPUCommandBuffer m_Buffer;
   };
-}  // namespace Rain
+}  // namespace WebEngine

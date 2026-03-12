@@ -8,7 +8,7 @@
 
 #define NoName "NoName"
 
-namespace Rain
+namespace WebEngine
 {
   class Scene;
   class Entity
@@ -131,4 +131,4 @@ namespace Rain
 
     friend class Scene;
   };
-}  // namespace Rain
+}  // namespace WebEngine

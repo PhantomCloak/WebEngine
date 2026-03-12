@@ -5,7 +5,7 @@
 #include <unordered_map>
 #include <vector>
 
-namespace Rain
+namespace WebEngine
 {
   struct Bone
   {
@@ -100,4 +100,4 @@ namespace Rain
     }
   };
 
-}  // namespace Rain
+}  // namespace WebEngine

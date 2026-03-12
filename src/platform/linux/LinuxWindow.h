@@ -5,9 +5,9 @@
 #include "core/Window.h"
 #include "engine/Event.h"
 
-namespace Rain
+namespace WebEngine
 {
-  class LinuxWindow : public Rain::Window
+  class LinuxWindow : public WebEngine::Window
   {
    protected:
     virtual void OnKeyPressed(KeyCode key, KeyAction action) {};
@@ -35,4 +35,4 @@ namespace Rain
    protected:
     GLFWwindow* m_Window;
   };
-}  // namespace Rain
+}  // namespace WebEngine

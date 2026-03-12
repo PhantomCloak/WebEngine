@@ -8,7 +8,7 @@
 #include "Application.h"
 #include <glm/gtc/type_ptr.hpp>
 
-namespace Rain
+namespace WebEngine
 {
   glm::vec3 EditorCamera::GetForward() const
   {
@@ -777,4 +777,4 @@ namespace Rain
   void EditorLayer::OnEvent(Event& event)
   {
   }
-}  // namespace Rain
+}  // namespace WebEngine

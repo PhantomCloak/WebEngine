@@ -16,7 +16,7 @@
 #include "render/ResourceManager.h"
 #include "render/ShaderManager.h"
 
-namespace Rain
+namespace WebEngine
 {
   SceneRenderer* SceneRenderer::instance;
 
@@ -343,7 +343,7 @@ namespace Rain
                                         .LodMinClamp = 0.0f,
                                         .LodMaxClamp = 1.0f});
 
-    auto bdrfLut = Rain::ResourceManager::LoadTexture("BDRF", RESOURCE_DIR "/textures/BRDF_LUT.png");
+    auto bdrfLut = WebEngine::ResourceManager::LoadTexture("BDRF", RESOURCE_DIR "/textures/BRDF_LUT.png");
 
     auto brdfSampler = Sampler::Create({.Name = "S_BRDF",
                                         .WrapFormat = TextureWrappingFormat::ClampToEdges,
@@ -890,4 +890,4 @@ namespace Rain
     PreRender();
     FlushDrawList();
   }
-}  // namespace Rain
+}  // namespace WebEngine

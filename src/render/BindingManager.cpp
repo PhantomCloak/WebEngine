@@ -2,7 +2,7 @@
 #include "debug/Profiler.h"
 #include "render/RenderContext.h"
 
-namespace Rain
+namespace WebEngine
 {
   RenderPassResourceType GetRenderPassTypeFromShaderDecl(BindingType type)
   {
@@ -311,4 +311,4 @@ namespace Rain
     const RenderPassInputDeclaration& decl = InputDeclarations.at(nameStr);
     return &decl;
   }
-}  // namespace Rain
+}  // namespace WebEngine

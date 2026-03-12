@@ -13,33 +13,33 @@
 
 struct GLFWwindow;
 
-namespace Rain
+namespace WebEngine
 {
   class ImGuiLayer;
 }
 #if __APPLE__
 #include "platform/osx/OSXWindow.h"
-typedef Rain::OSXWindow AppWindow;
+typedef WebEngine::OSXWindow AppWindow;
 #elif __linux__
 #include "platform/linux/LinuxWindow.h"
-typedef Rain::LinuxWindow AppWindow;
+typedef WebEngine::LinuxWindow AppWindow;
 #elif __EMSCRIPTEN__
 #include "platform/web/WebWindow.h"
-typedef Rain::WebWindow AppWindow;
+typedef WebEngine::WebWindow AppWindow;
 #endif
 
-namespace Rain
+namespace WebEngine
 {
   class Application : public AppWindow
   {
    protected:
     void OnKeyPressed(KeyCode key, KeyAction action) override;
     // void OnMouseMove(double xPos, double yPos) override;
-    void OnMouseClick(Rain::MouseCode button) override;
+    void OnMouseClick(WebEngine::MouseCode button) override;
     void OnResize(int height, int width) override;
 
    public:
-    Application(const Rain::WindowProps& props)
+    Application(const WebEngine::WindowProps& props)
         : AppWindow(props)
     {
       m_Instance = this;
@@ -54,14 +54,14 @@ namespace Rain
 
     glm::vec2 GetWindowSize();
     float GetDeltaTime() const { return m_DeltaTime; }
-    Ref<Rain::SwapChain> GetSwapChain() { return m_SwapChain; }
+    Ref<WebEngine::SwapChain> GetSwapChain() { return m_SwapChain; }
 
    private:
-    Ref<Rain::SwapChain> m_SwapChain;
+    Ref<WebEngine::SwapChain> m_SwapChain;
     LayerStack m_Layers;
     ImGuiLayer* m_ImGuiLayer = nullptr;
     static Application* m_Instance;
     float m_DeltaTime = 0.0f;
     float m_LastFrameTime = 0.0f;
   };
-}  // namespace Rain
+}  // namespace WebEngine

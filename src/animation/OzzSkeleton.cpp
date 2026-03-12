@@ -1,6 +1,6 @@
 #include "OzzSkeleton.h"
 
-namespace Rain
+namespace WebEngine
 {
   void OzzSkeleton::SetSkeleton(ozz::unique_ptr<ozz::animation::Skeleton> skeleton)
   {
@@ -38,4 +38,4 @@ namespace Rain
     }
   }
 
-}  // namespace Rain
+}  // namespace WebEngine

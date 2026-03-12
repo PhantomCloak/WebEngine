@@ -4,7 +4,7 @@
 
 #include <glm/glm.hpp>
 
-namespace Rain
+namespace WebEngine
 {
     class Input
     {
@@ -16,4 +16,4 @@ namespace Rain
         static float GetMouseX();
         static float GetMouseY();
     };
-} // namespace Rain
+} // namespace WebEngine

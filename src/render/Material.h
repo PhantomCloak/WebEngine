@@ -7,7 +7,7 @@
 
 #define MATERIAL_UNIFORM_KEY "MaterialUniform"
 
-namespace Rain {
+namespace WebEngine {
   class Material {
    public:
     UUID Id;
@@ -78,4 +78,4 @@ namespace Rain {
     std::map<uint32_t, Ref<Material>> m_Materials;
     uint32_t m_MaterialCount;
   };
-}  // namespace Rain
+}  // namespace WebEngine

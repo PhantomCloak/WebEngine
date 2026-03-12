@@ -9,7 +9,7 @@
 #include "render/Mesh.h"
 #include "scene/Entity.h"
 
-namespace Rain
+namespace WebEngine
 {
 
   class SceneRenderer;
@@ -64,4 +64,4 @@ namespace Rain
     Ref<PhysicsScene> m_PhysicsScene;
     friend class Entity;
   };
-}  // namespace Rain
+}  // namespace WebEngine

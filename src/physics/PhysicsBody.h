@@ -4,7 +4,7 @@
 #include <Jolt/Physics/Collision/Shape/Shape.h>
 #include "scene/Entity.h"
 
-namespace Rain {
+namespace WebEngine {
   class PhysicsBody {
    public:
     PhysicsBody(JPH::BodyInterface& bodyInterface, Entity entity);
@@ -36,4 +36,4 @@ namespace Rain {
     JPH::Ref<JPH::Shape> m_Shape;
     Entity m_Entity;
   };
-}  // namespace Rain
+}  // namespace WebEngine

@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-namespace Rain {
+namespace WebEngine {
   using MouseCode = uint16_t;
   using MouseState = uint16_t;
 
@@ -31,4 +31,4 @@ namespace Rain {
       ButtonMiddle = Button2
     };
   }  // namespace Mouse
-}  // namespace Rain
+}  // namespace WebEngine

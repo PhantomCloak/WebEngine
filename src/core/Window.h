@@ -2,7 +2,7 @@
 #include <cstdint>
 #include <string>
 
-namespace Rain
+namespace WebEngine
 {
   struct WindowProps
   {
@@ -32,4 +32,4 @@ namespace Rain
 
     virtual void* GetNativeWindow() const = 0;
   };
-}  // namespace Rain
+}  // namespace WebEngine

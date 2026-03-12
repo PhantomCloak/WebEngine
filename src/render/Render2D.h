@@ -6,7 +6,7 @@
 #include "render/GPUAllocator.h"
 #include "render/Shader.h"
 
-namespace Rain {
+namespace WebEngine {
   struct LineVertex {
     glm::vec3 position;
     glm::vec4 color;
@@ -56,4 +56,4 @@ namespace Rain {
     std::vector<QueuedLine> m_QueuedLines;
     static constexpr size_t MAX_LINES_PER_BATCH = 1000;
   };
-}  // namespace Rain
+}  // namespace WebEngine

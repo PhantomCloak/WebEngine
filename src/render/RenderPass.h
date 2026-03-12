@@ -6,7 +6,7 @@
 #include "render/Texture.h"
 #include "webgpu/webgpu.h"
 
-namespace Rain
+namespace WebEngine
 {
   struct RenderPassSpec
   {
@@ -48,4 +48,4 @@ namespace Rain
    private:
     WGPURenderPassEncoder m_Encoder;
   };
-}  // namespace Rain
+}  // namespace WebEngine

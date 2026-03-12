@@ -1,7 +1,7 @@
 #include "Render.h"
 #include "render/CommandBuffer.h"
 
-namespace Rain
+namespace WebEngine
 {
   struct ShaderDependencies
   {
@@ -36,4 +36,4 @@ namespace Rain
       pipeline->Invalidate();
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

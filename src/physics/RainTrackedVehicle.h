@@ -5,7 +5,7 @@
 #include "physics/PhysicsVehicle.h"
 #include <vector>
 
-namespace Rain {
+namespace WebEngine {
   struct TrackedWheelProps {
     glm::vec3 CenterOfMassOffset = glm::vec3(0.0f);
     float VehicleWidth;
@@ -37,4 +37,4 @@ namespace Rain {
     float mTurretHeading = 0.0f;
     float mBarrelPitch = 0.0f;
   };
-}  // namespace Rain
+}  // namespace WebEngine

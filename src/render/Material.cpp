@@ -1,7 +1,7 @@
 #include "Material.h"
 #include "render/Render.h"
 
-namespace Rain
+namespace WebEngine
 {
   Material::Material(const std::string& name, Ref<Shader> shader)
       : m_Name(name)
@@ -103,4 +103,4 @@ namespace Rain
   {
     return m_Shader->GetReflectionInfo().ShaderTypes[MATERIAL_UNIFORM_KEY][name];
   }
-}  // namespace Rain
+}  // namespace WebEngine

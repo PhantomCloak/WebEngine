@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-namespace Rain {
+namespace WebEngine {
   class Camera;
   class Cursor {
    public:
@@ -20,4 +20,4 @@ namespace Rain {
     static float GetScrollDelta();
     static void ResetScrollDelta();
   };
-}  // namespace Rain
+}  // namespace WebEngine

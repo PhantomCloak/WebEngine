@@ -9,7 +9,7 @@
 #include "scene/Entity.h"
 #include "physics/PhysicsWheel.h"
 
-namespace Rain {
+namespace WebEngine {
   class PhysicsVehicleController {
    public:
     PhysicsVehicleController(Ref<PhysicsBody> vehicleBody);
@@ -39,4 +39,4 @@ namespace Rain {
     JPH::VehicleConstraint* m_VehicleConstraint;
     std::vector<JPH::VehicleTrackSettings*> m_TrackSettings;
   };
-}  // namespace Rain
+}  // namespace WebEngine

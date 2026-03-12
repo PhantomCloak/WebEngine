@@ -16,7 +16,7 @@
 
 #include <stb_image_resize2.h>
 
-namespace Rain
+namespace WebEngine
 {
 
   void WriteTexture(const void* pixelData, WGPUTexture target, uint32_t width, uint32_t height, uint32_t targetMip, uint32_t targetLayer, TextureFormat format);
@@ -438,4 +438,4 @@ namespace Rain
       wgpuQueueWriteTexture(*queue, &dest, pixelData, dataSize, &textureLayout, &textureSize);
     }
   }
-}  // namespace Rain
+}  // namespace WebEngine

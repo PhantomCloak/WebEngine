@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-namespace Rain {
+namespace WebEngine {
   class FileSys {
    public:
     static std::vector<std::string> GetFilesInDirectory(std::string path);
@@ -19,4 +19,4 @@ namespace Rain {
     static bool IsFileExist(std::string path);
     static void WatchFile(const std::string& path, std::function<void(std::string fileName)> callback);
   };
-}  // namespace Rain
+}  // namespace WebEngine

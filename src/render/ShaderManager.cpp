@@ -11,7 +11,7 @@
 #include "render/RenderContext.h"
 #include "render/Shader.h"
 
-namespace Rain
+namespace WebEngine
 {
   std::map<std::string, Ref<Shader>> ShaderManager::m_Shaders;
 
@@ -702,4 +702,4 @@ namespace Rain
 
     return m_Shaders[shaderId];
   }
-}  // namespace Rain
+}  // namespace WebEngine

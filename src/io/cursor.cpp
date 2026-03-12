@@ -6,7 +6,7 @@
 #include "../../../editor/editor.h"
 #endif
 
-namespace Rain
+namespace WebEngine
 {
   static GLFWwindow* NativeWndPtr;
   static bool isMouseCapturing = false;
@@ -125,4 +125,4 @@ namespace Rain
   {
     scrollDelta = 0.0f;
   }
-}  // namespace Rain
+}  // namespace WebEngine

@@ -2,7 +2,7 @@
 
 #include <vector>
 
-namespace Rain {
+namespace WebEngine {
   struct KeyEvent {
     int keyCode;
     bool isPressed;
@@ -17,4 +17,4 @@ namespace Rain {
     static void Poll();
     static void FlushPressedKeys();
   };
-}  // namespace Rain
+}  // namespace WebEngine

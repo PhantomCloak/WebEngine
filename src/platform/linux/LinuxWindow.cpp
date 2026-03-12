@@ -7,12 +7,12 @@ static void GLFWErrorCallback(int error, const char* description) {
   RN_LOG_ERR("GLFW Error ({0}): {1}", error, description);
 }
 
-Rain::LinuxWindow::~LinuxWindow() {
+WebEngine::LinuxWindow::~LinuxWindow() {
   Shutdown();
 }
 
-void Rain::LinuxWindow::Init(const WindowProps& props) {
-  //Rain::Log::Init();
+void WebEngine::LinuxWindow::Init(const WindowProps& props) {
+  //WebEngine::Log::Init();
   //RN_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
 
   bool success = glfwInit();
@@ -80,5 +80,5 @@ void Rain::LinuxWindow::Init(const WindowProps& props) {
   });
 }
 
-void Rain::LinuxWindow::Shutdown() {
+void WebEngine::LinuxWindow::Shutdown() {
 }

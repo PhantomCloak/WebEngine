@@ -10,7 +10,7 @@
 #include "OzzSkeleton.h"
 #include "core/Ref.h"
 
-namespace Rain
+namespace WebEngine
 {
   class OzzAnimator
   {
@@ -66,4 +66,4 @@ namespace Rain
     bool m_Initialized = false;
   };
 
-}  // namespace Rain
+}  // namespace WebEngine

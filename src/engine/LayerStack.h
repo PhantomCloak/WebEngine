@@ -2,7 +2,7 @@
 #include <vector>
 #include "engine/Layer.h"
 
-namespace Rain
+namespace WebEngine
 {
   class LayerStack
   {
@@ -37,4 +37,4 @@ namespace Rain
    private:
     std::vector<Layer*> m_Layers;
   };
-}  // namespace Rain
+}  // namespace WebEngine

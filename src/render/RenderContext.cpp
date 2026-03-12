@@ -1,5 +1,5 @@
 #include "RenderContext.h"
 
-namespace Rain {
+namespace WebEngine {
   RenderContext* RenderContext::m_Instance;
 }

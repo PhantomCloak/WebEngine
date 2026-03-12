@@ -8,7 +8,7 @@
 #include "render/Render2D.h"
 #include "render/RenderPass.h"
 
-namespace Rain
+namespace WebEngine
 {
   struct MeshKey
   {
@@ -202,4 +202,4 @@ namespace Rain
     void RenderSkeletalMeshes(Ref<RenderPass> passEncoder);
     void RenderSkeletalShadows(Ref<RenderPass> renderPass, int cascadeIndex);
   };
-}  // namespace Rain
+}  // namespace WebEngine

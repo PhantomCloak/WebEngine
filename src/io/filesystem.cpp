@@ -6,7 +6,7 @@
 #include <sstream>
 #include <thread>
 
-namespace Rain {
+namespace WebEngine {
   std::vector<std::string> FileSys::GetFilesInDirectory(std::string path) {
     std::vector<std::string> fileList;
     for (const auto& entry : std::filesystem::directory_iterator(path)) {
@@ -98,4 +98,4 @@ namespace Rain {
       }
     }).detach();
   }
-}  // namespace Rain
+}  // namespace WebEngine

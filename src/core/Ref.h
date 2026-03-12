@@ -2,7 +2,7 @@
 
 #include <memory>
 
-namespace Rain
+namespace WebEngine
 {
   template <typename T>
   using Ref = std::shared_ptr<T>;
@@ -31,4 +31,4 @@ namespace Rain
   if (!ptr)                                                     \
     return nullptr;                                             \
   return static_cast<type*>(std::memset(ptr, 0, sizeof(type))); })()
-}  // namespace Rain
+}  // namespace WebEngine

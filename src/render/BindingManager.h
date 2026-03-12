@@ -7,7 +7,7 @@
 #include "render/Shader.h"
 #include "render/Texture.h"
 
-namespace Rain {
+namespace WebEngine {
   enum RenderPassResourceType {
     PT_Uniform,
     PT_DynamicUniform,
@@ -68,4 +68,4 @@ namespace Rain {
 
     BindingSpec m_BindingSpec;
   };
-}  // namespace Rain
+}  // namespace WebEngine

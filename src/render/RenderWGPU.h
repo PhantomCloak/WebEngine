@@ -1,7 +1,7 @@
 #pragma once
 #include "render/Render.h"
 
-namespace Rain
+namespace WebEngine
 {
   class RenderWGPU : public Render
   {
@@ -90,4 +90,4 @@ namespace Rain
 
     friend class RenderContext;
   };
-}  // namespace Rain
+}  // namespace WebEngine

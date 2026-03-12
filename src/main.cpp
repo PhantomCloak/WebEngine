@@ -7,7 +7,7 @@
 #include <emscripten/html5.h>
 #endif
 
-using namespace Rain;
+using namespace WebEngine;
 
 int main(int argc, char** argv)
 {
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 
   // CommandLine::AddParam("--render", "noapi");
 
-  Rain::WindowProps props("Bouncing Balls", resX, resY);
+  WebEngine::WindowProps props("Bouncing Balls", resX, resY);
 #ifdef __EMSCRIPTEN__
   double canvasWidth, canvasHeight;
   emscripten_get_element_css_size("#canvas", &canvasWidth, &canvasHeight);
@@ -46,7 +46,7 @@ int main(int argc, char** argv)
 #endif
   // RN_LOG("W: {} H: {}", props.Width, props.Height);
 
-  std::unique_ptr<Rain::Window> app = std::make_unique<Application>(props);
+  std::unique_ptr<WebEngine::Window> app = std::make_unique<Application>(props);
 
   app->OnStart();
   app->Run();
